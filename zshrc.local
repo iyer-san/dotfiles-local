@@ -7,9 +7,17 @@ plugins=(virtualenv)
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/workspace
 # source $HOME/.asdf/shims/virtualenvwrapper.sh
-source "$HOME/dotfiles/antigen.zsh"
-source "$HOME/dotfiles/.zgen/zgen.zsh"
+source "$HOME/dotfiles-local/antigen.zsh"
+source "$HOME/dotfiles-local/.zgen/zgen.zsh"
 
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Tell Antigen that you're done.
+antigen apply
 
 # if the init script doesn't exist
 if ! zgen saved; then
