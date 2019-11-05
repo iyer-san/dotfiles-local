@@ -10,6 +10,7 @@ export PROJECT_HOME=$HOME/workspace
 source "$HOME/dotfiles-local/antigen.zsh"
 source "$HOME/dotfiles-local/.zgen/zgen.zsh"
 
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
